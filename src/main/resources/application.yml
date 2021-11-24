@@ -1,6 +1,8 @@
 cloud:
   aws:
     s3:
-      bucket: 본인 S3 bucket이름
+      bucket: maru-event-image
     region:
       static: ap-northeast-2
+    stack:
+      auto: false

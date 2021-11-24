@@ -106,7 +106,7 @@
     </div>
     <div class="col-md-10">
         <p><strong>결과 이미지입니다.</strong></p>
-        <img src="" id="result-image">
+        <img src="https://maru-event-image.s3.ap-northeast-2.amazonaws.com/static/bf117d53-85d7-46f1-bfd7-2a95ce4df27eScreen+Shot+2021-11-18+at+12.20.39+AM.png" id="result-image">
     </div>
 </div>
 
@@ -186,16 +186,17 @@
     function uploadImage() {
         var file = $('#img')[0].files[0];
         var formData = new FormData();
-        formData.append('data', file);
+        formData.append('images', file);
 
         $.ajax({
             type: 'POST',
-            url: '/upload',
+            url: '/images',
             data: formData,
             processData: false,
             contentType: false
-        }).done(function (data) {
-            $('#result-image').attr("src", data);
+        }).done(function (images) {
+            $('#result-image').attr("src", images);
+            console.log(images)
         }).fail(function (error) {
             alert(error);
         })

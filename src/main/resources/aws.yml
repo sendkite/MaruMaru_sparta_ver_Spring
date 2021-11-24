@@ -1,0 +1,11 @@
+cloud:
+  aws:
+    credentials:
+      accessKey: AKIAYYR57WZ7DFH2PO5L
+      secretKey: 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
+    s3:
+      bucket: maru-event-image
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false

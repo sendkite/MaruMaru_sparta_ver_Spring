@@ -22,8 +22,9 @@ public class MeetController {
         return meetService.saveMeet(meetRequestDto);
     }
 
-    @PostMapping("/upload")
-    public String upload(@RequestParam("data") MultipartFile multipartFile) throws IOException {
+
+    @PostMapping("/images")
+    public String upload(@RequestParam("images") MultipartFile multipartFile) throws IOException {
         return s3Uploader.upload(multipartFile, "static");
     }
 }
