@@ -8,4 +8,6 @@ import lombok.Setter;
 public class MeetRequestDto {
     private String title;
     private String content;
+    private String image;
+    private String address;
 }
